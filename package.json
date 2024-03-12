@@ -68,5 +68,10 @@
   },
   "bugs": {
     "url": "https://github.com/gempi/datocms-plugin-netlify-forms/issues"
+  },
+  "overrides": {
+    "react-scripts": {
+      "typescript": "^5"
+    }
   }
 }
