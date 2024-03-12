@@ -2,10 +2,10 @@ import { RenderConfigScreenCtx } from "datocms-plugin-sdk";
 import {
   Button,
   Canvas,
-  TextField,
   Form,
   FieldGroup,
   SelectField,
+  TextInput,
 } from "datocms-react-ui";
 import { useEffect, useState } from "react";
 import { Form as FormHandler, Field } from "react-final-form";
@@ -71,25 +71,13 @@ export default function ConfigScreen({ ctx }: PropTypes) {
             <FieldGroup>
               <Field name="accessToken">
                 {({ input, meta: { error } }) => (
-                  <TextField
+                  <TextInput
                     id="accessToken"
-                    label="Access token"
-                    hint={
-                      <>
-                        You can generate a{" "}
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://app.netlify.com/user/applications#personal-access-tokens"
-                        >
-                          personal access token
-                        </a>{" "}
-                        in your Netlify user settings.
-                      </>
-                    }
+                    labelText="Access token"
                     required
                     error={error}
                     {...input}
+                    type="password"
                   />
                 )}
               </Field>
